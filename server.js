@@ -27,6 +27,10 @@ app.use(`/${prefix}/auth`, AuthRouter);
 app.use(`/${prefix}/posts`, PostRouter);
 app.use(`/${prefix}/comments`, CommentRouter);
 
+app.get('/', (req, res) =>{
+  res.send('home');
+})
+
 app.get('/ping', (req, res) =>{
   res.send('pong');
 })
